@@ -18,6 +18,21 @@ This project is a **Swiggy Clone** built with **React, Redux Toolkit, and Tailwi
 - **Tailwind CSS** - For designing UI  
 - **Swiggy API (Network Tab)** - Fetching restaurant & menu data  
 
+## 📸 Project Screenshots  
+
+### 🏠 Homepage  
+![Homepage](https://github.com/Harsh5225/SwiggyReact/blob/main/src/utils/assets/homepage.png)  
+
+### 🍽️ Restaurant Food Display  
+![Restaurant Food](https://github.com/Harsh5225/SwiggyReact/blob/main/src/utils/assets/RestaurantFood.png)  
+
+### 🍕 Food Display Section  
+![Food Display](https://github.com/Harsh5225/SwiggyReact/blob/main/src/utils/assets/FoodDisplay.png)  
+
+### 🛒 Checkout Page  
+![Checkout](https://github.com/Harsh5225/SwiggyReact/blob/main/src/utils/assets/Checkout.png)  
+
+
 ## 📌 Project Structure  
 ```
 /src  
