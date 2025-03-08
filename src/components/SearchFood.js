@@ -7,7 +7,8 @@ const SearchFood = () => {
   const [query, setQuery] = useState("");
   const [foodData, setFoodData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const OPENAI_API_KEY ="";
+  const OPENAI_API_KEY =process.env.REACT_APP_OPENAI_API_KEY
+  ;
 
   // Function to fetch AI-enhanced suggestions
   async function fetchOpenAISuggestions(input) {
