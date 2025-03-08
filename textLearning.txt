@@ -1,0 +1,68 @@
+Here’s a **short notes** version of URL encoding in development:  
+
+---
+
+### **📌 URL Encoding & Decoding – Quick Notes**  
+
+#### **1️⃣ What is URL Encoding?**
+- Converts special characters into a safe format for URLs.
+- Prevents errors when passing query parameters in APIs.  
+
+#### **2️⃣ Common Encodings**
+| Character | Encoded Form |
+|-----------|-------------|
+| Space `" "` | `%20` or `+` |
+| Comma `","` | `%2C` |
+| Ampersand `"&"` | `%26` |
+| Slash `"/"` | `%2F` |
+| Question Mark `"?"` | `%3F` |
+
+#### **3️⃣ Encoding & Decoding in JavaScript**
+✅ **Encode a URL parameter**  
+```javascript
+const category = "Atta, Rice and Dals";
+const encodedCategory = encodeURIComponent(category);
+console.log(encodedCategory); // Atta%2C%20Rice%20and%20Dals
+```
+
+✅ **Decode a URL parameter**  
+```javascript
+const decodedCategory = decodeURIComponent("Atta%2C%20Rice%20and%20Dals");
+console.log(decodedCategory); // Atta, Rice and Dals
+```
+
+#### **4️⃣ Handling Spaces in URLs**
+- `%20` → Standard encoding  
+- `+` → Used in form submissions  
+
+#### **5️⃣ Where It’s Used in Development**
+- **Frontend (React, Vue, Angular)** → Passing URLs dynamically  
+- **Backend (Node.js, Python, Java, PHP)** → Extracting query parameters  
+- **API Calls** → Sending data securely in URLs  
+
+#### **6️⃣ Real-World Example**
+📌 **Generating API URL in React**  
+```javascript
+const category = "Fresh Vegetables";
+const encodedCategory = encodeURIComponent(category);
+const url = `https://www.swiggy.com/instamart/category-listing?categoryName=${encodedCategory}`;
+console.log(url); 
+// Output: https://www.swiggy.com/instamart/category-listing?categoryName=Fresh%20Vegetables
+```
+
+📌 **Extracting Query Parameters in Express.js**  
+```javascript
+app.get("/instamart/category-listing", (req, res) => {
+    const category = decodeURIComponent(req.query.categoryName);
+    res.send(`Category: ${category}`);
+});
+```
+
+#### **7️⃣ Key Takeaways**
+- **Always encode special characters** to prevent URL breakage.  
+- **Use `encodeURIComponent()`** for encoding and `decodeURIComponent()` for decoding.  
+- **Important for APIs, query strings, and dynamic URL generation.**  
+
+---
+
+💡 **Remember:** Proper URL encoding ensures smooth communication between frontend & backend! 🚀
