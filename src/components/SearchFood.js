@@ -7,7 +7,7 @@ const SearchFood = () => {
   const [query, setQuery] = useState("");
   const [foodData, setFoodData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const OPENAI_API_KEY =process.env.key;
+  const OPENAI_API_KEY ="";
 
   // Function to fetch AI-enhanced suggestions
   async function fetchOpenAISuggestions(input) {
@@ -19,7 +19,7 @@ const SearchFood = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${OPENAI_API_KEY}`,
+            Authorization: `Bearer ${}`,
           },
           body: JSON.stringify({
             model: "gpt-4",
