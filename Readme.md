@@ -16,7 +16,10 @@ This project is a **Swiggy Clone** built with **React, Redux Toolkit, and Tailwi
 - **Redux Toolkit** - State management with slices  
 - **React Router** - Routing for navigation  
 - **Tailwind CSS** - For designing UI  
-- **Swiggy API (Network Tab)** - Fetching restaurant & menu data  
+- **Swiggy API (Network Tab)** - Fetching restaurant & menu data
+
+## Flow Diagram
+![Img](https://github.com/Harsh5225/SwiggyReact/blob/main/diagram%20(1).png)
 
 ## 📸 Project Screenshots  
 
